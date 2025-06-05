@@ -2,9 +2,9 @@ import './Header.css'
 import React from 'react'
 import NavBar from './NavBar/NavBar'
 
-function Header() {
+function Header({setSelectedCategory}) {
   return (
-    <NavBar/>
+    <NavBar setSelectedCategory={setSelectedCategory}/>
   )
 }
 

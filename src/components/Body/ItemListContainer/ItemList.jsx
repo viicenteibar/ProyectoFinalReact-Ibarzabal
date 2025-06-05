@@ -10,36 +10,13 @@ const categories = {
     KIT: "Kit",
 };
 
-function ItemList({ items }) {
-    const [selectedCategory, setSelectedCategory] = useState("");
+function ItemList({ items, selectedCategory }) {
 
     const filteredItem = selectedCategory
         ? items.filter(item => item.categoria === selectedCategory)
         : items;
 
     return (
-        <div>
-            <div>
-                <button onClick={() => setSelectedCategory(categories.MATES)}>
-                    Mates
-                </button>
-                <button onClick={() => setSelectedCategory(categories.TERMO)}>
-                    Termos
-                </button>
-                <button onClick={() => setSelectedCategory(categories.ACCESORIOS)}>
-                    Accesorios
-                </button>
-                <button onClick={() => setSelectedCategory(categories.BOMBILLAS)}>
-                    Bombillas
-                </button>
-                <button onClick={() => setSelectedCategory(categories.KIT)}>
-                    Kit
-                </button>
-                <button onClick={() => setSelectedCategory("")}>
-                    Todos
-                </button>
-
-            </div>
             <div className="product-grid">
                 {filteredItem.map(item => (
                 <Item
@@ -51,8 +28,6 @@ function ItemList({ items }) {
                 />
             ))}
             </div>
-
-        </div>
     );
 }
 

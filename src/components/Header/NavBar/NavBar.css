@@ -52,3 +52,32 @@ body{
     border-radius: 50%;
     transform: translate(50%, -50%);
 }
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fae9e4;
+  border: 1px solid #a5503c;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}

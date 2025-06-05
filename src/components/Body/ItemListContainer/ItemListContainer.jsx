@@ -1,14 +1,12 @@
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
-
 import { products } from '../../../data/products';
 import './itemliststyle.css';
 
-import React from 'react'
-
 function ItemListContainer() {
-  
   const [items, setItems] = useState([]);
+  const { categoriaId } = useParams();
 
   useEffect(() => {
     const fetchProducts = new Promise((resolve) => {
@@ -19,15 +17,19 @@ function ItemListContainer() {
 
     fetchProducts.then((data) => {
       setItems(data);
-    })
+    });
   }, []);
 
-  return (
+  // Si hay categoriaId, filtramos, si no, mostramos todos
+  const filteredItems = categoriaId
+    ? items.filter(item => item.categoria.toLowerCase() === categoriaId.toLowerCase())
+    : items;
 
+  return (
     <div className='container'>
-      <ItemList items={items} />
+      <ItemList items={filteredItems} />
     </div>
-  )
+  );
 }
 
 export default ItemListContainer;
