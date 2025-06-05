@@ -1,0 +1,128 @@
+/* preguntas frecuentes */
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.faq-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #2e7d32;
+}
+
+.faq-container h2 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: #388e3c;
+}
+
+.faq-container p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+/* tips */
+
+.tips-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.tips-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #2e7d32;
+}
+
+.tips-container h2 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: #00796b;
+}
+
+.tips-container ol,
+.tips-container ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.tips-container li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* contacto */
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.contact-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2e7d32;
+}
+
+.contact-container p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.contact-container ul {
+  margin-bottom: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.contact-container li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-container a {
+  color: #1b5e20;
+  text-decoration: underline;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #1b5e20;
+}

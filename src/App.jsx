@@ -9,6 +9,7 @@ import ItemListContainer from './components/Body/ItemListContainer/ItemListConta
 import PreguntasFrecuentes from './components/Body/Pages/PreguntasFrecuentes'
 import TipsYCuidados from './components/Body/Pages/TipsYCuidados'
 import Contacto from './components/Body/Pages/Contacto'
+import DetalleProducto from './components/Body/Pages/DetalleProducto'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
+        <Route path="/detalleProducto/:detalleProductoId" element={<DetalleProducto />} />
         <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
         <Route path="/tips-y-cuidados" element={<TipsYCuidados />} />
         <Route path="/contacto" element={<Contacto />} />

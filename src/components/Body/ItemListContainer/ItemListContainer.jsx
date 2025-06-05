@@ -20,7 +20,6 @@ function ItemListContainer() {
     });
   }, []);
 
-  // Si hay categoriaId, filtramos, si no, mostramos todos
   const filteredItems = categoriaId
     ? items.filter(item => item.categoria.toLowerCase() === categoriaId.toLowerCase())
     : items;
