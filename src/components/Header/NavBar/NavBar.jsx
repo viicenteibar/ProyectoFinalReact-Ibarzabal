@@ -13,7 +13,7 @@ function NavBar() {
             <a href="#">INICIO</a>
           </li>
           <li className="navbar-item">
-            <a href="#">PRODUCTOS</a>
+            <a href="#">CATEGORIAS</a>
           </li>
           <li className="navbar-item">
             <a href="#">PREGUNTAS FRECUENTES</a>
