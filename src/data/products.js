@@ -1,8 +1,14 @@
+import mate1 from '../assets/mates/Mate-Imperial-de-Algarrobo.webp'
+import mate2 from '../assets/mates/CAMIONERO-DE-ACERO-LISO-NEGRO.jpg'
+import mate3 from '../assets/mates/Mate-de-Vidrio-Forrado.webp'
+import mate4 from '../assets/mates/Mate-de-Calabaza-Premium.png'
+
+
 export const products = [
-  { id: 1, nombre: "Mate Imperial de Algarrobo", precio: 5500, descripcion: "Mate artesanal de algarrobo con virola de alpaca.", categoria: "Mates", stock: 22 },
-  { id: 2, nombre: "Mate Camionero de Acero", precio: 4800, descripcion: "Mate estilo camionero con interior de acero inoxidable.", categoria: "Mates", stock: 17 },
-  { id: 3, nombre: "Mate de Vidrio Forrado", precio: 3900, descripcion: "Mate de vidrio recubierto en cuero sintético.", categoria: "Mates", stock: 35 },
-  { id: 4, nombre: "Mate de Calabaza Premium", precio: 6200, descripcion: "Mate de calabaza curado, con virola decorada.", categoria: "Mates", stock: 9 },
+  { id: 1, nombre: "Mate Imperial de Algarrobo", precio: 15500, descripcion: "Mate artesanal de algarrobo con virola de alpaca.", categoria: "Mates", stock: 22, img: mate1 },
+  { id: 2, nombre: "Mate Camionero de Acero", precio: 4800, descripcion: "Mate estilo camionero con interior de acero inoxidable.", categoria: "Mates", stock: 17, img: mate2 },
+  { id: 3, nombre: "Mate de Vidrio Forrado", precio: 3900, descripcion: "Mate de vidrio recubierto en cuero sintético.", categoria: "Mates", stock: 35, img: mate3 },
+  { id: 4, nombre: "Mate de Calabaza Premium", precio: 6200, descripcion: "Mate de calabaza curado, con virola decorada.", categoria: "Mates", stock: 9, img: mate4 },
   { id: 5, nombre: "Bombilla Pico de Loro", precio: 1800, descripcion: "Bombilla de acero inoxidable con forma curvada.", categoria: "Bombillas", stock: 40 },
   { id: 6, nombre: "Bombilla Recta Clásica", precio: 1300, descripcion: "Bombilla recta de acero con filtro desmontable.", categoria: "Bombillas", stock: 28 },
   { id: 7, nombre: "Bombilla de Bronce Niquelado", precio: 2500, descripcion: "Bombilla tradicional con detalles decorativos.", categoria: "Bombillas", stock: 12 },

@@ -126,3 +126,98 @@
 .contact-form button:hover {
   background-color: #1b5e20;
 }
+
+/* detalle producto */
+
+.detalle-producto {
+  display: flex;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.columna-imagen {
+  flex: 1;
+  min-width: 280px;
+}
+
+.detalle-imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.columna-info {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detalle-nombre {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.detalle-descripcion {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.detalle-stock,
+.detalle-precio {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.boton-comprar {
+  padding: 0.7rem 1.4rem;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.boton-comprar:hover {
+  background-color: #1e874d;
+}
+
+.detalle-agotado {
+  color: red;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.mensaje-error {
+  text-align: center;
+  color: red;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive para pantallas chicas */
+@media (max-width: 768px) {
+  .detalle-producto {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .columna-imagen,
+  .columna-info {
+    min-width: 100%;
+  }
+}
