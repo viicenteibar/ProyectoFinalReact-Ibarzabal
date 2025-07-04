@@ -26,6 +26,7 @@ function ItemList({ items, selectedCategory }) {
                     precio={item.precio}
                     img={item.img}
                     descr={item.descripcion}
+                    stock={item.stock}
                 />
             ))}
             </div>

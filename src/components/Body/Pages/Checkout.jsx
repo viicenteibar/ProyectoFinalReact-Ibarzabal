@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useCart } from '../../context/CartContext';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 import './pagesstyle.css';
 
 function Checkout() {
@@ -11,6 +13,7 @@ function Checkout() {
     envio: 'retiro',
     pago: 'tarjeta'
   });
+  const navigate = useNavigate();
 
   if (cart.length === 0 && step !== 3) {
     return <div className="carrito-vacio">El carrito está vacío.</div>;
@@ -27,8 +30,18 @@ function Checkout() {
 
   const handleFinish = (e) => {
     e.preventDefault();
-    setStep(3);
     setCart([]);
+    Swal.fire({
+      title: '¡Compra realizada!',
+      text: 'Gracias por tu compra. Recibirás un email con los detalles.',
+      icon: 'success',
+      confirmButtonColor: '#457b9d',
+      confirmButtonText: 'Aceptar',
+      background: '#fff',
+      color: '#457b9d'
+    }).then(() => {
+      navigate('/');
+    });
   };
 
   if (step === 1) {
@@ -88,14 +101,8 @@ function Checkout() {
     );
   }
 
-  if (step === 3) {
-    return (
-      <div className="carrito-detalle">
-        <h2>¡Gracias por tu compra!</h2>
-        <p>Recibirás un email con los detalles.</p>
-      </div>
-    );
-  }
+  // No renderiza nada en el paso 3, solo navega tras el SweetAlert
+  return null;
 }
 
 export default Checkout;

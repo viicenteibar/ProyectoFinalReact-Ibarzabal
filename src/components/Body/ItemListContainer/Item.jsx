@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 
-function Item({ id, nombre, precio, img, descr }) {
+function Item({ id, nombre, precio, img, descr, stock }) {
   const { addToCart } = useCart();
 
   return (
@@ -15,7 +15,7 @@ function Item({ id, nombre, precio, img, descr }) {
           <Link to={`/detalleProducto/${id}`}>
             <button>Más Info</button>
           </Link>
-          <button onClick={() => addToCart({ id, nombre, precio, img, descr })}>
+          <button onClick={() => addToCart({ id, nombre, precio, img, descr, stock })}>
             <i className="bi bi-bag-plus-fill"></i>
           </button>
         </div>

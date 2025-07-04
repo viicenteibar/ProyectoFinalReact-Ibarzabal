@@ -47,7 +47,13 @@ function DetalleProducto() {
               />
               <button onClick={() => setCantidad(c => Math.min(producto.stock, c + 1))} style={{padding: "4px 10px"}}>+</button>
             </div>
-            <button className="boton-comprar" onClick={handleAdd}>Agregar al carrito</button>
+            <button
+              className="boton-comprar"
+              onClick={handleAdd}
+              disabled={cantidad > producto.stock}
+            >
+              Agregar al carrito
+            </button>
           </>
         ) : (
           <p className="detalle-agotado">Producto sin stock</p>

@@ -66,6 +66,7 @@ function Cart() {
             <span style={{ minWidth: 32, display: "inline-block", textAlign: "center" }}>{item.cantidad}</span>
             <button
               onClick={() => addOne(item)}
+              disabled={item.cantidad >= item.stock}
               style={{
                 margin: "0 8px",
                 fontSize: "1.2rem",
